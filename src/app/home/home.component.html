@@ -1,0 +1,42 @@
+<div class="container d-flex justify-content-center align-items-center text-center card mb-lg-5 bg-dark text-light">
+    <h2 class="mt-0 mb-5">Your User Profile</h2>
+    <img [src]="image" alt="" class="container card bg-dark card-img-top">
+    <div class="card-body">
+        <h4 class="card-title">Name:</h4>
+        <p class="card-text mx-3">{{name}}</p>
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+        <h4 class="card-title">Address:</h4>
+        <p class="card-text mx-3">{{address}}</p>
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+        <h4 class="card-title">Designation:</h4>
+        <p class="card-text mx-3">{{designation}}</p>
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+        <h4 class="card-title">Department:</h4>
+        <p class="card-text mx-3">{{department}}</p>
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+        <h4 class="card-title">Contacts:</h4>
+        <p #contact class="card-text mx-3">{{contacts}}</p>
+    </div>
+
+    <hr>
+
+    <a (onclick)="redirectEditUser()" class="btn btn-outline-light mt-2" href="/edit/user"><i class="bi bi-pencil">
+            Edit</i></a>
+
+</div>

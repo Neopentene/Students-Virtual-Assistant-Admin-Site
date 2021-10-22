@@ -1,0 +1,11 @@
+.card {
+  box-sizing: border-box;
+  max-width: 50rem;
+  width: 95%;
+  margin-top: 2.5%;
+  padding: 5% 5%;
+}
+
+.align-text-center {
+  text-align: center;
+}

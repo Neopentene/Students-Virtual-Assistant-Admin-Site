@@ -1,0 +1,23 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+.card {
+  box-sizing: border-box;
+  max-width: 60rem;
+  width: 95%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 5% 5%;
+}
+
+hr {
+  width: 95%;
+}
+
+.align-text-center {
+  text-align: center;
+}
+
+img {
+  border: 2px solid coral;
+  max-width: 75%;
+  max-height: max-content;
+}

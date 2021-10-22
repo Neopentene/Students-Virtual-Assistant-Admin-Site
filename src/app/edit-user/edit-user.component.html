@@ -1,0 +1,75 @@
+<div class="container d-flex justify-content-center align-items-center text-center card mb-lg-5 bg-dark text-light">
+    <h2 class="mt-0 mb-5">Edit Your User Profile</h2>
+    <img #profile [src]="image" alt="" class="container card bg-dark card-img-top">
+    <span class="d-flex flex-row align-items-center">
+        <i class="bi bi-pencil"></i>
+        <label for="profile-img" class="card-text mx-3 p-2 border border-white rounded"><i
+                class="bi bi-cloud-upload"></i>{{imageCaption}}</label>
+        <input type="file" id="profile-img" class="d-none btn btn-outline-light mx-3 p-2 border border-white rounded"
+            (change)="setPreview($event)" />
+    </span>
+    <div class="card-body">
+        <h4 class="card-title">Name:</h4>
+        <span class="d-flex flex-row align-items-center">
+            <i class="bi bi-pencil"></i>
+            <p #nameP contentEditable="true" class="card-text mx-3 p-2 border border-white rounded">
+                {{name}}
+            </p>
+        </span>
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+        <h4 class="card-title">Address:</h4>
+        <span class="d-flex flex-row align-items-center">
+            <i class="bi bi-pencil"></i>
+            <p #addressP contentEditable="true" class="card-text mx-3 p-2 border border-white rounded">{{address}}</p>
+        </span>
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+        <h4 class="card-title">Designation:</h4>
+        <span class="d-flex flex-row align-items-center">
+            <i class="bi bi-pencil"></i>
+            <p #designationP contentEditable="true" class="card-text mx-3 p-2 border border-white rounded">
+                {{designation}}</p>
+        </span>
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+        <h4 class="card-title">Department:</h4>
+        <span class="d-flex flex-row align-items-center">
+            <i class="bi bi-pencil"></i>
+            <p #departmentP contentEditable="true" class="card-text mx-3 p-2 border border-white rounded">{{department}}
+            </p>
+        </span>
+    </div>
+
+    <hr>
+
+    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+        <h4 class="card-title">Contacts:</h4>
+        <!--
+        <button class="btn btn-outline-light mt-3 mb-3 w-auto"><i class="bi bi-arrow-counterclockwise"></i></button>
+        <button class="btn btn-outline-light mb-3"><i class="bi bi-dash"></i></button>
+        -->
+        <span class="d-flex flex-row align-items-center m-2">
+            <i class="bi bi-pencil"></i>
+            <p #contactP contentEditable="true" type="numbers" class="card-text mx-3 p-2 border border-white rounded"
+                style="max-width: 100%; line-break: strict;">
+                {{contacts}}</p>
+        </span>
+        <!--
+        <button class="btn btn-outline-light mt-3"><i class="bi bi-plus"></i></button>
+        -->
+    </div>
+    <hr>
+    <a (click)="onSaveHit()" class="btn btn-outline-light mt-2"><i class="bi bi-save">
+            Save</i></a>
+
+</div>

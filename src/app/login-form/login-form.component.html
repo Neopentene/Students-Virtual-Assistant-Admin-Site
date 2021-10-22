@@ -1,0 +1,26 @@
+<div #alertUser class="m-lg-4 border-3" style="position: absolute; top: 0; right: 0; left: 0; z-index: 9999;"></div>
+<form id="faculty-login" [formGroup]="loginForm" (submit)="testValidation()"
+    class="container card mb-2 bg-dark text-light">
+    <h2 class="h2 my-2">Admin Login</h2>
+    <div class="mb-3" formGroupName="identifyUser">
+        <label for="userName" class="form-label">Username</label>
+        <input type="text" class="form-control" formControlName="userName" (input)="userNameOrEmailRequired()"
+            name="userName" id="userName" aria-describedby="userName" />
+        <div id="userNameHelp" [textContent]="userNameHelp" class="form-text text-danger"></div>
+
+        <div class="align-content-center align-text-center">or</div>
+
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email" (input)="userNameOrEmailRequired()"
+            name="email" id="email" aria-describedby="email" />
+        <div id="emailHelp" [textContent]="emailHelp" class="form-text text-danger"></div>
+
+    </div>
+    <div class="mb-3" formGroupName="sensitivePasswordField">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password" name="password" id="password"
+            aria-describedby="password" (input)="passwordValidation()" />
+        <div id="passwordHelp" [textContent]="passwordHelp" class="form-text text-danger"></div>
+    </div>
+    <button (click)="testValidation()" type="submit" class="btn btn-primary mt-4">Login</button>
+</form>
