@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Admin Side</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul #navList class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a [ngClass]="{'disabled': loginStatus == false, 'active': checkRoute('home') == true}" class="nav-link"
+            aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a [ngClass]="{'disabled': loginStatus == false, 'active': checkRoute('edit') == true}" class="nav-link"
+            href="/edit/user">Edit Profile</a>
+        </li>
+        <li class="nav-item">
+          <a [ngClass]="{'disabled': loginStatus == false, 'active': checkRoute('create') == true}" class="nav-link"
+            href="/create/user">Create User</a>
+        </li>
+        <li [ngClass]="{'disabled': loginStatus == false}" class="nav-item dropdown">
+          <a [ngClass]="{'disabled': loginStatus == false}" class="nav-link dropdown-toggle" id="navbarDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a [ngClass]="{'disabled': loginStatus == false, 'active': checkRoute('faculties') == true}"
+                class="dropdown-item" href="/faculties">Faculties</a></li>
+            <li>
+              <a [ngClass]="{'disabled': loginStatus == false, 'active': checkRoute('classes') == true}"
+                class="dropdown-item" href="/classes">Classes</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="clearAll()" href="/login">Log
+                out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div #alertUser class="m-lg-4"></div>
+
+
+<router-outlet></router-outlet>
